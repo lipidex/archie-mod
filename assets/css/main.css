@@ -107,7 +107,7 @@ pre {
   background-color: #ececec;
   line-height: 1.4;
   overflow-x: auto;
-  padding: 1em;
+  padding: 1.3em;
 }
 
 .highlight pre ::selection {
@@ -144,9 +144,18 @@ header {
 header .main {
   font-size: 1.5rem;
 }
+
 h1, h2, h3, h4, h5, h6 {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin-top: 2em;
+}
+
+article h1 {
+  font-size: 1.7rem;
+}
+
+article h2 {
+  font-size: 1.4rem;
 }
 
 h1::before { color: var(--maincolor); content: '# '; }
@@ -330,4 +339,35 @@ table th{
 table td{
   padding: 6px 13px;
   border: 1px solid #dfe2e5;
+}
+
+
+/* Copy Button */
+.copy-btn {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 5rem;
+  padding: 0.1rem 0.5rem;
+  font-size: 12px;
+  font-family: monospace;
+  line-height: 1.4;
+  letter-spacing: 0.025rem;
+  text-align: right;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 1);
+  background: rgba(78, 78, 78, 1);
+  border-radius: 0 0 0.25rem 0.25rem;
+  border: 0;
+}
+
+.copy-btn > svg {
+  width: 11px;
+  height: 11px;
+  margin-bottom: -0.1rem;
+}
+
+div.highlight:hover .copy-btn,
+pre:hover .copy-btn {
+  display: block;
 }

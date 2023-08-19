@@ -15,9 +15,11 @@
 			{{ .Content }}
 		</section>
 
+
+		{{ if ne .Type "page" }}
+		{{ if gt .Params.tags 0 }}
+		<h2 id="tags">Tags</h2>
 		<div class="post-tags">
-			{{ if ne .Type "page" }}
-			{{ if gt .Params.tags 0 }}
 			<nav class="nav tags">
 				<ul class="tags">
 					{{ range .Params.tags }}
@@ -25,9 +27,10 @@
 					{{ end }}
 				</ul>
 			</nav>
-			{{ end }}
-			{{ end }}
 		</div>
+		{{ end }}
+		{{ end }}
+
 		{{- $.Scratch.Set "isDisqus" true -}}
 		<!-- Check if disqus short name is given -->
 		{{ if not .Site.DisqusShortname }}
