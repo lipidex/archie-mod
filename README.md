@@ -1,4 +1,4 @@
-# Archie - Hugo theme
+# Archie-mod - Hugo theme
 Archie is a minimal and clean theme for hugo with a markdown-ish UI.
 
 Forked from [Archie Theme](https://github.com/athul/archie)
